@@ -9,7 +9,9 @@ export interface BotMetric {
   price: number;
 }
 
-export const useBotWebSocket = (url: string = 'ws://localhost:8081/api/v1/ws/metrics') => {
+const DEFAULT_WS_URL = process.env.NEXT_PUBLIC_BOT_WS_URL || 'ws://localhost:8081/api/v1/ws/metrics';
+
+export const useBotWebSocket = (url: string = DEFAULT_WS_URL) => {
   const [metrics, setMetrics] = useState<BotMetric[]>([]);
   const [lastMetric, setLastMetric] = useState<BotMetric | null>(null);
   const [isConnected, setIsConnected] = useState(false);
