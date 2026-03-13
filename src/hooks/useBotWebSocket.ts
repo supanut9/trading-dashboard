@@ -7,6 +7,7 @@ export interface BotMetric {
   equity: number;
   symbol: string;
   price: number;
+  bot_mode?: string;
 }
 
 const DEFAULT_WS_URL = process.env.NEXT_PUBLIC_BOT_WS_URL || 'ws://localhost:8081/api/v1/ws/metrics';
