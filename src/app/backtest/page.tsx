@@ -136,8 +136,10 @@ export default function BacktestPage() {
                   >
                     <option value="sma">SMA Crossover (Trend)</option>
                     <option value="rsi">RSI Reversion (Mean)</option>
+                    <option value="macd">MACD Crossover (Trend)</option>
                     <option value="breakout">Price Breakout (Vol)</option>
                     <option value="bollinger">Bollinger Bands (Vol)</option>
+                    <option value="rsi,macd">Ensemble (RSI + MACD)</option>
                     <option value="ml">ML Model (XGBoost)</option>
                   </select>
                 </div>
